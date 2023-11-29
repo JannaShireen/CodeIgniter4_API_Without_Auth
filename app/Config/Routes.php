@@ -11,9 +11,9 @@ $routes->get('/', 'Home::index');
 $routes->group("api",function($routes){
 $routes->post("create-employee","EmployeesController::createEmploye");
 $routes->get("list-employees","EmployeesController::listEmployees");
-$routes->get("single-employee/(:num)","EmployeesController::singleEmployeeDetail($1)");
-$routes->put("update-employee/(:num)","EmployeesController::editEmployee($1)");
-$routes->put("delete-employee/(:num)","EmployeesController::deleteEmployee($1)");
+$routes->get("single-employee/(:num)","EmployeesController::singleEmployeeDetail/$1");
+$routes->put("update-employee/(:num)","EmployeesController::editEmployee/$1");
+$routes->delete("delete-employee/(:num)","EmployeesController::deleteEmployee/$1");
 
 
 });
